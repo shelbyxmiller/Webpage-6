@@ -36,7 +36,7 @@ body {
      outline-color: #fff;
      outline-offset: -3px;
      outline-width: 6px;
-     animation: dashes 1.5s infinite;
+     animation: dashes 1s infinite;
      animation-timing-function: ease;
    }
 
@@ -88,6 +88,6 @@ body {
    }
    @keyframes dashes {
      0% { transform: scale(1); outline-color: #b58676; }
-     50% { transform: scale(1.05); outline-color: #FFF; }
+     50% { transform: scale(1.03); outline-color: #FFF; }
      100% { transform: scale(1); outline-color: #b58676; }
    }
