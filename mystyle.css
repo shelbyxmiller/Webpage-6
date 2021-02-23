@@ -1,0 +1,92 @@
+body {
+  background-color: #bd7040;
+  background: repeating-linear-gradient(
+  45deg,
+  #dd9c8b,
+  #e4a08d 40px,
+  #e4a08d 40px,
+  #dd9c8b 80px
+);
+}
+
+#container {
+    position: relative;
+    margin: 0 auto;
+    top: 130px;
+    height: 320px;
+    width: 560px;
+}
+
+  .envelope {
+     position: absolute;
+     border-top: 200px solid #b58676;
+     border-left: 280px solid #f5d5cb;
+     border-bottom: 140px solid #f5d5cb;
+     border-right: 280px solid #f5d5cb;
+     box-shadow: 7px 7px 25px #b58676;
+     outline-style: dashed;
+     outline-color: #fff;
+     outline-offset: 5px;
+     animation: dashes 2s infinite;
+     animation-timing-function: ease;
+   }
+
+   .envelope:after{
+     content:"";
+     position: absolute;
+     left:-280px; top:-200px;
+     width: 560px;
+     height: 320px;
+   }
+
+   .heart {
+     background-color: #e08467;
+     height: 80px;
+     margin: 0 auto;
+     position: relative;
+     top: 140px;
+     width: 80px;
+     animation: beat 1s infinite;
+     animation-timing-function: linear;
+     animation-play-state: running;
+   }
+
+   .heart:before,
+   .heart:after {
+     content: "";
+     background-color: #e08467;
+     border-radius: 150%;
+     height: 80px;
+     position: absolute;
+     width: 80px;
+   }
+
+   .heart:before {
+     top: -45px;
+     left: 0;
+     animation: circlebeat 1s infinite;
+     animation-timing-function: linear;
+   }
+
+   .heart:after {
+     left: 45px;
+     top: 0;
+     animation: circlebeat 1s infinite;
+     animation-timing-function: linear;
+   }
+
+   @keyframes beat {
+     0% { transform: rotate(-45deg) scale(1); background-color: #e08467; }
+     50% { transform: rotate(-45deg) scale(1.2); background-color: #f56358; }
+     100% { transform: rotate(-45deg) scale(1); background-color: #e08467; }
+   }
+   @keyframes circlebeat {
+     0% { scale(1); background-color: #e08467; }
+     50% { scale(1.2); background-color: #f56358; }
+     100% { scale(1); background-color: #e08467; }
+   }
+   @keyframes dashes {
+     0% {outline-color: #b58676; }
+     50% {outline-color: #FFF; }
+     100% {outline-color: #b58676; }
+   }
