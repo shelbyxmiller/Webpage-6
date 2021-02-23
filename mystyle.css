@@ -24,11 +24,6 @@ body {
      border-bottom: 140px solid #f5d5cb;
      border-right: 280px solid #f5d5cb;
      box-shadow: 7px 7px 25px #b58676;
-     outline-style: dashed;
-     outline-color: #fff;
-     outline-offset: 5px;
-     animation: dashes 2s infinite;
-     animation-timing-function: ease;
    }
 
    .envelope:after{
@@ -36,7 +31,13 @@ body {
      position: absolute;
      left:-280px; top:-200px;
      width: 560px;
-     height: 320px;
+     height: 340px;
+     outline-style: dashed;
+     outline-color: #fff;
+     outline-offset: -3px;
+     outline-width: 6px;
+     animation: dashes 1.5s infinite;
+     animation-timing-function: ease;
    }
 
    .heart {
@@ -86,7 +87,7 @@ body {
      100% { scale(1); background-color: #e08467; }
    }
    @keyframes dashes {
-     0% {outline-color: #b58676; }
-     50% {outline-color: #FFF; }
-     100% {outline-color: #b58676; }
+     0% { transform: scale(1); outline-color: #b58676; }
+     50% { transform: scale(1.05); outline-color: #FFF; }
+     100% { transform: scale(1); outline-color: #b58676; }
    }
